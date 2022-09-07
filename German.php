@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja">
+<head>
+  <title>ドイツ滞在記</title>
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="contact.js"></script>
+</head>
 <body>
   <h2> ドイツ滞在の記録 </h2>
   <p>　現在ドイツの大学院にいます. 内部モデル理論を研究しています. </p>
