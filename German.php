@@ -176,11 +176,6 @@
    </p>
   明日は溜まっているドイツ語の課題とCMIをやる. 
   <hr>
-  <title>お問い合わせフォーム</title>
-<link rel="stylesheet" href="style.css">
-<script type="text/javascript" src="contact.js"></script>
-</head>
-<body>
 <div><h1>Company Name</h1></div>
 <div><h2>お問い合わせ</h2></div>
 <div>
