@@ -34,24 +34,7 @@ var validate = function() {
 			flag = false;
 		}
 	}
-
-	// 電話番号の入力をチェック
-	if(document.form.tel.value == ""){
-		errorElement(document.form.tel, "電話番号が入力されていません");
-		flag = false;
-	} else {
-		// 電話番号の形式をチェック
-		if(!validateNumber(document.form.tel.value)){
-			errorElement(document.form.tel, "半角数字のみを入力してください");
-			flag = false;
-		} else {
-			if(!validateTel(document.form.tel.value)){
-				errorElement(document.form.tel, "電話番号が正しくありません");
-				flag = false;
-			}
-		}
-	}
-
+	
 	// お問い合わせ項目の選択をチェック
 	if(document.form.item.value == ""){
 		errorElement(document.form.item, "お問い合わせ項目が選択されていません");
@@ -109,16 +92,6 @@ var validateNumber = function (val){
 		return true;
 	}
 }
-
-
-var validateTel = function (val){
-	if (val.match(/^[0-9-]{6,13}$/) == null) {
-		return false;
-	} else {
-		return true;
-	}
-}
-
 
 var validateKana = function (val){
 	if (val.match(/^[ぁ-ん]+$/) == null) {
