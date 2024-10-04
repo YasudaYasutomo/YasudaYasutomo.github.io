@@ -1,0 +1,103 @@
+以下はhtmlで書かれた私の数学の研究者としてのホームページです。このページのデザインの改善点を提示してください。またその改善点を全て盛り込んだ完全なコードを教えてください：<!DOCTYPE html>
+<html>
+    <head>
+    <script type="text/javascript" async 
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+<body>
+  <p style="text-align :center">
+   <h1>Taichi Yasuda (安田　泰智)</h1>
+  </p>
+  <p>
+      <table>
+          <tr>
+              <td><img src="IMG_5732.jpeg" height="402" width-"391"></td>
+          </tr>
+          <tr>
+              <td>in my fisrt office, 01.04.2024</td
+          </tr>
+      </table>
+  </p>
+  <h3> About me</h3>
+  <p>
+    I am a Ph.D. student in mathematics at University of Münster, Germany. 
+    <br>
+    My supervisor is <a href="https://ivv5hpp.uni-muenster.de/u/rds/">Prof. Ralf Schindler</a>. 
+    I am from Japan. 
+    <br>
+    I am interested in mathmatical logic, especially set theory, in particular, descriptive set theory and inner model theory.  
+  </p>  
+  <p>
+      e-mail: tyasuda at uni-muenster dot de
+      <br>
+      (with the "at" replaced by "@" and the "dot" replaced by a dot)
+  </p>
+  <p> Address:
+  <br>
+Institut für Mathematische Logik und Grundlagenforschung
+<br>
+Fachbereich Mathematik und Informatik der Universität Münster
+<br>
+Einsteinstrasse 62
+<br>
+48149 Münster, Deutschland
+  </p>
+ <h3>Published papers and preprints</h3>
+<ul>
+    <li><b>\({\bf\mathrm{MM}^{*, ++}_{\mathfrak{c}}}\) in \({\bf\mathbb{P}_{\max}}\) extensions of strong models of determinacy</b> (with Ralf Schindler), submitted. <a href="https://arxiv.org/abs/2404.12836">arxiv</a></li>
+</ul>
+<h3>Upcoming schedule</h3>
+<ul>
+    <li>January 12-17, 2025: Set Theory Meeting at Oberwolfach. </li>
+    <li>February 16-22, 2025: Arctic Set Theory Workshop 7. </li>
+</ul>
+ <h3> Conference talks</h3>
+  <ul>
+      <li> (Invited) June 28 2024: \({\bf\mathrm{MM}^{*, ++}_{\mathfrak{c}}}\) in \({\bf\mathbb{P}_{\max}}\) extensions of strong models of determinacy, "Determinacy, Inner Models and Forcing Axioms" at Erwin Schrödinger Institute, Vienna. </li>
+  </ul>
+  <h3> Seminar talks</h3>
+  <ul>
+      <li>Winter Semester 2023: Towards Martin's Maximum in \(\mathbb{P}_{\max}\) extensions, University of Münster. </li>
+      <li>Summer Semester 2024: Sealing for the theory of universally Baire sets, University of Münster. </li>
+  </ul>
+  
+  <h3> Short CV</h3>
+  <p> 
+  <ul>
+      <li>June 14 1999: Born in Japan</li>
+      <br>
+      <li> April 2018 - March 2022: Undergraduate studies in mathematics at The University of Tokyo (supervisor: Prof. Toshiyasu Arai)</li>
+      <br>
+      <li> October 2022 - February 2024: MSc Mathematics at University of Münster with distinction(mit Auszeichnung), 
+      <br>with a scholarship from Deutscher Akademischer Austauschdienst (DAAD), 
+      <br>thesis advisor: Prof. Ralf Schindler</li>
+      <br>
+      <li> March 2024 -: Ph.D. student with Prof Ralf Schindler at University of Münster</li>
+      
+  </ul>
+  <b>I was involuved in organizing the following conferences:</b> <ul>
+      <li>September 16-20, 2024: European Set Theory Conference, Münster, Germany. </li>
+  </ul>
+  </p>
+  <h3>Notes</h3>
+  <p>
+      <ul>
+          <li>Personal note for Moschovakis Coding Lemma(<a href="Moschovakis Coding Lemma.pdf">Handwritten note</a>):
+          <br>
+          The proof of Moschovakis Coding Lemma and some facts related to it, which might be useful.
+          </li>
+      </ul>
+  </p>
+  <p>
+      <table>
+          <tr>
+              <td><img src="talk2.jpeg" height="402" width="752"></td>
+          </tr>
+          <tr>
+              <td>my talk at Vienna Inner Model Theory 2024</td>
+          </tr>
+      </table>
+  </p>
+  </body>
+</html>
