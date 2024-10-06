@@ -85,38 +85,32 @@
   <div class="container">
     <h2>ドイツ滞在の記録(2024年10月)</h2>
 
-    <div class="ex">
-      <p>2024年10月4日</p>
-      <p>ChatGPTにホームページの改善をお願いした結果こうなりました。すごい。</p>
-    </div>
-
-    <hr>
-
-    <div class="ex">
-      <p>2024年10月5日</p>
-      <p>研究を進めた。全くうまくいかなくて絶望。
-      </p>
-      <p>今の方針が根本的にダメな気がしてきた。とても厳しい。
-　　　　</p>
-    </div>
-
-    <hr>
-
-    <div class="ex">
-      <p>2024年10月6日</p>
-      <p>goodnessは常に保たれるという気づきを得た。これはでかい進展だ。
-      </p>
-      <p>あとはIterability partをどうにかすれば証明のprototypeが完成する気がする。
-　　　　</p>
-      <p>
-        革靴のいくつかを丸洗いした。結構楽しい。革靴の修理も自前でできるようになりたい。
-      </p>
-      <p>
-        ChatGPTに年末の南ヨーロッパ旅行の大まかなプランを聞いてみた。かなり良さそうなプランが提示されて驚いた。びっくり。
-      </p>
-    </div>
+    <div id="diary-content"></div>
+    
     <p>他の日記は <a href="index.html">こちら</a> から読むことができます。</p>
   </div>
+
+  <script>
+    // 別フォルダ内の日記HTMLファイルのパスを指定
+    const folder = 'diaries/';  // 日記ファイルが保存されているフォルダ名
+    const htmlFiles = [
+    ];
+
+    const diaryContent = document.getElementById('diary-content');
+
+    // 各HTMLファイルをフォルダから読み込んでページに挿入
+    htmlFiles.forEach(file => {
+      fetch(folder + file)
+        .then(response => response.text())
+        .then(data => {
+          // 読み込んだHTML内容を表示
+          diaryContent.innerHTML += `<div class="ex">${data}</div><hr>`;
+        })
+        .catch(error => {
+          console.error('ファイルの読み込みに失敗しました: ', error);
+        });
+    });
+  </script>
 </body>
 
 </html>
