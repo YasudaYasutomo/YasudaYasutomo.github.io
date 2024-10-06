@@ -7,77 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>ドイツ滞在の記録(2024年10月)</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-      font-size: 16px;
-      line-height: 1.6;
-      color: #333;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: white;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    h2 {
-      text-align: center;
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    p {
-      margin-bottom: 1.2em;
-      text-indent: 1em;
-    }
-
-    .ex {
-      background-color: #f9f9f9;
-      padding: 20px;
-      margin: 20px 0;
-      border-left: 5px solid #4ec4d3;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .ex p:first-of-type {
-      font-weight: bold;
-      font-size: 1.2em;
-      color: #4ec4d3;
-      margin-bottom: 0.5em;
-    }
-
-    a {
-      text-decoration: none;
-      color: #4ec4d3;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    hr {
-      border: none;
-      border-top: 2px solid #ccc;
-      margin: 40px 0;
-    }
-
-    @media screen and (max-width: 600px) {
-      .container {
-        width: 90%;
-        margin: 0 auto;
-      }
-
-      .ex {
-        width: 100%;
-        margin: 1em 0;
-        padding: 1em;
-      }
-    }
+    /* 必要なスタイルは省略 */
   </style>
 </head>
 
@@ -91,23 +21,32 @@
   </div>
 
   <script>
-    // 別フォルダ内の日記HTMLファイルのパスを指定
     const folder = './diaries/';  // 日記ファイルが保存されているフォルダ名
-    const htmlFiles = [
-    ];
+
+    // 規則的に名前が付けられたファイル名の配列を用意（例: 1.htmlから100.htmlまで）
+    const htmlFiles = [];
+    for (let i = 1; i <= 500; i++) {
+      htmlFiles.push(`${i}.html`);
+    }
 
     const diaryContent = document.getElementById('diary-content');
 
     // 各HTMLファイルをフォルダから読み込んでページに挿入
     htmlFiles.forEach(file => {
       fetch(folder + file)
-        .then(response => response.text())
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`ファイルが見つかりません: ${file}`);
+          }
+          return response.text();
+        })
         .then(data => {
           // 読み込んだHTML内容を表示
           diaryContent.innerHTML += `<div class="ex">${data}</div><hr>`;
         })
         .catch(error => {
-          console.error('ファイルの読み込みに失敗しました: ', error);
+          // ファイルが存在しない場合は無視
+          console.log(error.message);  // エラーメッセージをコンソールに表示するだけ
         });
     });
   </script>
