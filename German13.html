@@ -99,6 +99,11 @@
       htmlFiles.push(`${i}.html`);
     }
 
+    // ファイル名を自然数順にソート
+    htmlFiles.sort((a, b) => {
+      return parseInt(a) - parseInt(b);
+    });
+
     const diaryContent = document.getElementById('diary-content');
 
     // 各HTMLファイルをフォルダから読み込んでページに挿入
