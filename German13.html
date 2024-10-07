@@ -106,23 +106,25 @@
 
     const diaryContent = document.getElementById('diary-content');
 
-    // 各HTMLファイルをフォルダから読み込んでページに挿入
-    htmlFiles.forEach(file => {
-      fetch(folder + file)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error(`ファイルが見つかりません: ${file}`);
-          }
-          return response.text();
-        })
-        .then(data => {
-          // 読み込んだHTML内容を表示
+    // Promise.allを使って順序を保ったまま処理する
+    Promise.all(
+      htmlFiles.map(file => 
+        fetch(folder + file)
+          .then(response => {
+            if (!response.ok) throw new Error(`ファイルが見つかりません: ${file}`);
+            return response.text();
+          })
+          .catch(error => {
+            console.log(error.message);
+            return ''; // エラーが発生した場合は空文字を返す
+          })
+      )
+    ).then(entries => {
+      entries.forEach(data => {
+        if (data) {
           diaryContent.innerHTML += `<div class="ex">${data}</div><hr>`;
-        })
-        .catch(error => {
-          // ファイルが存在しない場合は無視
-          console.log(error.message);  // エラーメッセージをコンソールに表示するだけ
-        });
+        }
+      });
     });
   </script>
 </body>
